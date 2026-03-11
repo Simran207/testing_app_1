@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
 
+import 'loginscreen.dart';
 import 'registrationpage.dart';
+import 'sharedpreference.dart';
 
 class Startpageanimation extends StatefulWidget {
   const Startpageanimation({super.key});
@@ -29,7 +31,19 @@ class StartpageanimationState extends State<Startpageanimation> {
         MaterialPageRoute(builder: (context) =>  Registrationpage()),
       );
     });
+  getStartPage();
   
+  }
+Future<Widget> getStartPage() async {
+    bool loggedIn = await Sharedpreference.isLoggedIn();
+
+    if (loggedIn) {
+      String name = await Sharedpreference.getName();
+     // return DashboardScreen(name: name);
+     return LoginScreen();
+    } else {
+      return Registrationpage();
+    }
   }
 
 
