@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:testing_app_1/otpscreenpage.dart';
-import 'package:testing_app_1/registrationpage.dart';
-import 'package:testing_app_1/sharedpreference.dart';
+
+import '../utility/sharedpreference.dart';
+import 'otpscreenpage.dart';
+import 'registrationpage.dart';
 
 class LoginScreen extends StatefulWidget {
   @override

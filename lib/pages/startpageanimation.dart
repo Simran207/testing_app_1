@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 
+import '../utility/sharedpreference.dart';
 import 'loginscreen.dart';
 import 'registrationpage.dart';
-import 'sharedpreference.dart';
 
 class Startpageanimation extends StatefulWidget {
   const Startpageanimation({super.key});
